@@ -11,29 +11,22 @@
 	  </script>
 	<![endif]-->
   </head>
-  <body>
-	<header class="navbar navbar-fixed-top navbar-inverse">
-	  <div class="container">
-		<%= link_to "sample app", '#', id: "logo" %>
-		<nav>
-		  <ul class="nav navbar-nav navbar-right">
-
-			<li><%= link_to "Home", root_path %></li>
-			<li><%= link_to "Help",   help_path %></li>
-			<% if user_signed_in? %>
-				<li><%= link_to "My Account", edit_user_registration_path %></li>  
-        <li><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
-			<% else %>
-				<li><%= link_to "Log in", new_user_registration_path %></li>
+	<body>
+		<%= render 'layouts/header' %>
+		<div class ="container">
+			<% if notice %>
+				<div class="container center">
+					<p class="alert alert-success"><%= notice %></p>
+				</div>
 			<% end %>
-		  </ul>
-		</nav>
-	  </div>
-	</header>
-	<div class="container">
-		<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-	  <%= yield %>
-	</div>
-  </body>
+
+			<% if alert %>
+				<div class="container center">
+		  		<p class="alert alert-success"><%= alert %></p>
+		  	</div>
+		  <% end %>	 
+
+			<%= yield %>
+		</div>
+	</body>
 </html>
