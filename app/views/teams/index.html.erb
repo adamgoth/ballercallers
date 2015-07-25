@@ -1,0 +1,23 @@
+<div class="container">
+	<h1>Teams</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>League</th>
+        <th>Team</th>
+        <th>Abbreviation</th>
+        <th>Created At</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @teams.each do |team| %>
+        <tr>
+          <td><%= team.league %></td>
+          <td><%= team.full_team_name %></td>
+          <td><%= team.team_abbreviation %></td>
+          <td><%= team.created_at %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

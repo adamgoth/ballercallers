@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get "users" => "users#index", as: "users"
   get "users/:id" => "users#show", as: "user"
 
+  get "teams" => "teams#index", as: "teams"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
