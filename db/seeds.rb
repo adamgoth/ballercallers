@@ -45,3 +45,57 @@ Team.create!(league:  "MLB",
              team_name: "Mets",
              full_team_name: "New York Mets",
              team_abbreviation: "NYM")
+
+Team.create!(league:  "MLB",
+             city_name: "Atlanta",
+             team_name: "Braves",
+             full_team_name: "Atlanta Braves",
+             team_abbreviation: "ATL")
+
+Team.create!(league:  "MLB",
+             city_name: "Miami",
+             team_name: "Marlines",
+             full_team_name: "Miami Marlins",
+             team_abbreviation: "MIA")
+
+Team.create!(league:  "MLB",
+             city_name: "Philadelphia",
+             team_name: "Phillies",
+             full_team_name: "Philadelphia Phillies",
+             team_abbreviation: "PHI")
+
+Team.create!(league:  "MLB",
+             city_name: "Washington",
+             team_name: "Nationals",
+             full_team_name: "Washington Nationals",
+             team_abbreviation: "WAS")
+
+Team.create!(league:  "MLB",
+             city_name: "Los Angeles",
+             team_name: "Dodgers",
+             full_team_name: "Los Angeles Dodgers",
+             team_abbreviation: "LAD")
+
+Team.create!(league:  "MLB",
+             city_name: "San Francisco",
+             team_name: "Giants",
+             full_team_name: "San Francisco Giants",
+             team_abbreviation: "SFG")
+
+Team.create!(league:  "MLB",
+             city_name: "Colorado",
+             team_name: "Rockies",
+             full_team_name: "Colorado Rockies",
+             team_abbreviation: "COL")
+
+Team.create!(league:  "MLB",
+             city_name: "San Diego",
+             team_name: "Padres",
+             full_team_name: "San Diego Padres",
+             team_abbreviation: "SDP")
+
+Team.create!(league:  "MLB",
+             city_name: "Arizona",
+             team_name: "Diamondbacks",
+             full_team_name: "Arizona Diamondbacks",
+             team_abbreviation: "ARI")
