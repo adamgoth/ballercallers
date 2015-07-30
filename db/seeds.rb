@@ -99,3 +99,33 @@ Team.create!(league:  "MLB",
              team_name: "Diamondbacks",
              full_team_name: "Arizona Diamondbacks",
              team_abbreviation: "ARI")
+
+Team.create!(league:  "MLB",
+             city_name: "Chicago",
+             team_name: "White Sox",
+             full_team_name: "Chicago White Sox",
+             team_abbreviation: "CWS")
+
+Team.create!(league:  "MLB",
+             city_name: "Cleveland",
+             team_name: "Indians",
+             full_team_name: "Cleveland Indians",
+             team_abbreviation: "CLE")
+
+Team.create!(league:  "MLB",
+             city_name: "Kansas City",
+             team_name: "Royals",
+             full_team_name: "Kansas City Royals",
+             team_abbreviation: "KCR")
+
+Team.create!(league:  "MLB",
+             city_name: "Detroit",
+             team_name: "Tigers",
+             full_team_name: "Tigers",
+             team_abbreviation: "DET")
+
+Team.create!(league:  "MLB",
+             city_name: "Milwaukee",
+             team_name: "Brewers",
+             full_team_name: "Milwaukee Brewers",
+             team_abbreviation: "MIL")
