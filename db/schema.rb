@@ -11,7 +11,61 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150725164954) do
+ActiveRecord::Schema.define(version: 20150804010006) do
+
+  create_table "contests", force: :cascade do |t|
+    t.string   "league"
+    t.string   "name"
+    t.datetime "starttime"
+    t.integer  "size"
+    t.integer  "user_id"
+    t.integer  "matchset_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "entries", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "contest_id"
+    t.integer  "game_id"
+    t.string   "selected_winner"
+    t.integer  "weight"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "game_gameset_relationships", force: :cascade do |t|
+    t.integer  "game_id"
+    t.integer  "gameset_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "games", force: :cascade do |t|
+    t.string   "league"
+    t.datetime "starttime"
+    t.string   "home_team"
+    t.string   "away_team"
+    t.string   "name"
+    t.integer  "gameset_id"
+    t.string   "status"
+    t.integer  "home_team_score"
+    t.integer  "away_team_score"
+    t.string   "winning_team"
+    t.string   "losing_team"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "gamesets", force: :cascade do |t|
+    t.string   "league"
+    t.datetime "starttime"
+    t.integer  "game_id"
+    t.integer  "number_of_games"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "teams", force: :cascade do |t|
     t.string   "league"
