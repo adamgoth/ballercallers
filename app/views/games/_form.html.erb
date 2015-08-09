@@ -1,0 +1,66 @@
+<%= form_for(@game) do |f| %>
+  <% if @game.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@game.errors.count, "error") %> prohibited this game from being saved:</h2>
+
+      <ul>
+      <% @game.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :league %><br>
+    <%= f.select :league, collection: ['MLB'] %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :away_team %><br>
+    <%= f.collection_select(:away_team_id, Team.all, :id, :full_team_name, { :prompt => true}) %>
+  </div>
+  
+  <div class="form-group">
+    <%= f.label :home_team %><br>
+    <%= f.collection_select(:home_team_id, Team.all, :id, :full_team_name, { :prompt => true}) %>
+  </div>
+
+
+  <div class="form-group">
+    <%= f.label :starttime %><br>
+    <%= f.datetime_select :starttime %>
+  </div>
+
+  <div class="form-group">
+    <%= f.select :status, collection: ['Not Started', 'In Progress', 'Ended'] %>
+
+  <div class="form-group">
+    <%= f.label :away_team_score %><br>
+    <%= f.number_field :away_team_score %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :home_team_score %><br>
+    <%= f.number_field :home_team_score %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :winning_team_id %><br>
+    <%= collection_select(:teams, :winning_team_id, Team.all, :id, :full_team_name, prompt: true) %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :losing_team_id %><br>
+    <%= collection_select(:teams, :losing_team_id, Team.all, :id, :full_team_name, prompt: true) %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit class: "btn btn-success" %>
+  </div>
+<% end %>

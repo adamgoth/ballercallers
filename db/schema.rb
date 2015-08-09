@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150804010006) do
+ActiveRecord::Schema.define(version: 20150808235933) do
 
   create_table "contests", force: :cascade do |t|
     t.string   "league"
@@ -44,17 +44,17 @@ ActiveRecord::Schema.define(version: 20150804010006) do
   create_table "games", force: :cascade do |t|
     t.string   "league"
     t.datetime "starttime"
-    t.string   "home_team"
-    t.string   "away_team"
     t.string   "name"
     t.integer  "gameset_id"
     t.string   "status"
     t.integer  "home_team_score"
     t.integer  "away_team_score"
-    t.string   "winning_team"
-    t.string   "losing_team"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "home_team_id"
+    t.integer  "away_team_id"
+    t.integer  "winning_team_id"
+    t.integer  "losing_team_id"
   end
 
   create_table "gamesets", force: :cascade do |t|

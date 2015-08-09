@@ -1,0 +1,43 @@
+<h1>Games</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>League</th>
+      <th>Name</th>
+      <th>Home Team</th>
+      <th>Away Team</th>
+      <th>Start Time (ET)</th>
+      <th>Status</th>
+      <th>Home Score</th>
+      <th>Away Score</th>
+      <th>Winner</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @games.each do |game| %>
+      <tr>
+        <td><%= link_to game.id, game %></td>
+        <td><%= game.league %></td>
+        <td><%= game.name %></td>
+        <td><%= game.home_team.full_team_name %></td>
+        <td><%= game.away_team.full_team_name %></td>
+        <td><%= game.starttime  %></td>
+        <td><%= game.status %>
+        <td><%= game.home_team_score %></td>
+        <td><%= game.away_team_score %></td>
+        <td><%= game.winning_team_id %></td>
+        <td><%= link_to 'Edit', edit_game_path(game) %></td>
+        <td><%= link_to 'Delete', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Game', new_game_path, class: "btn btn-warning" %>

@@ -3,8 +3,12 @@ class Game < ActiveRecord::Base
 	has_many :entries
 	has_many :game_gameset_relationships
 	has_many :gamesets, through: :game_gameset_relationships
+	belongs_to :away_team, :class_name => 'Team', :foreign_key => 'away_team_id'
+	belongs_to :home_team, :class_name => 'Team', :foreign_key => 'home_team_id'
+	belongs_to :winning_team, :class_name => 'Team', :foreign_key => 'winning_team_id'
+	belongs_to :losing_team, :class_name => 'Team', :foreign_key => 'losing_team_id'
 
 	accepts_nested_attributes_for :entries
 
-	validates :league, :home_team, :away_team, :starttime, :name, :status,  presence: true
+	validates :league, :home_team_id, :away_team_id, :starttime, :name, :status,  presence: true
 end

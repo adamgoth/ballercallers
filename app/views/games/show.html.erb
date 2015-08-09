@@ -1,0 +1,60 @@
+<h1> <%= @game.away_team.full_team_name %> @ <%= @game.home_team.full_team_name %></h1>
+
+<h2> <%= @game.starttime %></h2>
+
+<br>
+
+<h3>Final Score:
+<%= @game.away_team.full_team_name %>
+<%= @game.away_team_score %>
+@
+<%= @game.home_team.full_team_name %>
+<%= @game.home_team_score %>
+</h3>
+
+<br>
+
+<p>
+  <strong>League:</strong>
+  <%= @game.league %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @game.name %>
+</p>
+
+<p>
+  <strong>Away Team:</strong>
+  <%= @game.away_team.full_team_name %>
+</p>
+
+<p>
+  <strong>Home Team:</strong>
+  <%= @game.home_team.full_team_name %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @game.status %>
+</p>
+
+<% unless @game.winning_team.nil? %>
+<p>
+  <strong>Winning team:</strong>
+  <%= @game.winning_team.full_team_name %>
+</p>
+
+<p>
+  <strong>Losing team:</strong>
+  <%= @game.losing_team.full_team_name %>
+</p>
+
+<% end %>
+
+
+<%= link_to 'Back to Games', games_path, class: "btn btn-info btn-sm"%>
+<br><br>
+<%= link_to 'Edit', edit_game_path(@game), class: "btn btn-danger btn-sm" %>
+<br><br>
+<%= link_to 'New Game', new_game_path, class: "btn btn-warning btn-sm"%>
