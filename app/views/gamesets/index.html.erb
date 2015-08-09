@@ -1,0 +1,40 @@
+<h1>Gamesets</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>League</th>
+      <th>Name</th>
+      <th>Start Time</th>
+      <th>Games</th>
+      <th># of Games</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @gamesets.each do |gameset| %>
+      <tr>
+        <td><%= gameset.id %></td>
+        <td><%= gameset.league %></td>
+        <td><%= gameset.name %></td>
+        <td><%= gameset.starttime %></td>
+        <td><% gameset.games.each do |game| %>
+              <%= game.name %><br>
+            <% end %>
+        </td>
+        <td><%= gameset.games.count %></td>
+        <td><%= link_to 'Edit', edit_gameset_path(gameset) %></td>
+        <td><%= link_to 'Show', gameset %></td>
+        <td><%= link_to 'Remove', gameset, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Gameset', new_gameset_path, class: 'btn btn-warning' %>
