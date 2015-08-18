@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   devise_for :users
 
-  root 'static_pages#home'
+  root 'contests#index'
   get "help" => "static_pages#help"
 
   get "users" => "users#index", as: "users"

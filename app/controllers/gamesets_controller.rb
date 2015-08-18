@@ -47,14 +47,6 @@ class GamesetsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def return_params
-      params.require(:gameset).permit(:user_id, 
-                                    :league, 
-                                    :name, 
-                                    :starttime, 
-                                    :game_id, 
-                                    :game_ids => [], 
-                                    :games_attributes => [:id, :name,
-                                    :entries_attributes => [:id, :user_id, :game_id, :weight, :winner_selected]
-                                    ])
+      params.require(:gameset).permit(:user_id, :league, :name, :starttime, :game_id, :game_ids => [])
     end
 end

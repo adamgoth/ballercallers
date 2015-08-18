@@ -1,0 +1,43 @@
+<% if user_signed_in? %>
+<ul class="nav nav-tabs">
+  <li class="active"><a href="#">All</a></li>
+  <li><a href="#">NFL</a></li>
+  <li><a href="#">NBA</a></li>
+  <li><a href="#">MLB</a></li>
+  <li><a href="#">NHL</a></li>
+</ul>
+  <p>
+    <%= link_to "Create New Contest", new_contest_path, class: 'btn btn-warning btn-entry btn-sm' %>
+  </p>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>League</th>
+          <th>Contest Name</th>
+          <th>Matchset</th>
+          <th>Start Time</th>
+          <th>Contest Size</th>
+          <th>Users entered</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @contests.each do |contest| %>
+        <tr>
+          <td><%= contest.league %></td>
+          <td><%= link_to contest.name, contest %></td>
+          <td><%= link_to contest.gameset.name, gameset_path(contest.gameset_id) %></td>
+          <td><%= contest.starttime.advance(:hours => -5).strftime("%a %b %d %I:%M %p EST") %></td>
+          <td><%= contest.size %></td>
+          <td><%= contest.entries_count %>
+        </tr>
+        <% end %>
+      </tbody>
+  </table>
+  <% else %>
+    <p>
+    
+    </p>
+  <% end %>
+  </div>
+
+

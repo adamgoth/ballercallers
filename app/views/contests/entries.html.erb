@@ -1,0 +1,36 @@
+<%= form_for(@contest) do |f| %>
+  <% @users.each do |user| %>
+  <h3><%= user.email %></h3>
+  <table>
+    <thead>
+      <tr>
+        <td>Home Team</td>
+        <td>Away Team</td>
+        <td>Selected Winner</td>
+        <td>Weight</td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @games.each do |game| %>
+      <tr>
+        <td><%= game.home_team.full_team_name %></td>
+        <td><%= game.away_team.full_team_name %></td>
+        <td>
+        <%= f.fields_for :games, game do |g| %>
+          <%= g.fields_for :entries, game.entries.where(user: user, contest: @contest.id).first_or_initialize do |e| %>
+            <%= e.collection_select(:selected_winner, Team.all, :id, :full_team_name, { :prompt => true}) %>
+            <%= e.number_field :weight %>
+            <%= e.hidden_field :user_id, :value => current_user.id %>
+            <%= e.hidden_field :contest_id, :value => @contest.id %>
+          <% end %>
+        <% end %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <% end %>
+  <div class="actions">
+    <%= f.submit class: "btn btn-success" %>
+  </div>
+<% end %>
