@@ -6,9 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-#User.create!(email: "adamgoth@gmail.com",
-#             password: "adamgoth",
-#             password_confirmation: "adamgoth")
+User.create!(:email => 'adamgoth@gmail.com', 
+      :password => 'password', 
+      :password_confirmation => 'password')
 
 Team.create!(league:  "MLB",
              city_name: "Chicago",
@@ -33,12 +33,6 @@ Team.create!(league:  "MLB",
              team_name: "Reds",
              full_team_name: "Cincinnati Reds",
              team_abbreviation: "CIN")
-
-Team.create!(league:  "MLB",
-             city_name: "Milwaukee",
-             team_name: "Brewers",
-             full_team_name: "Milwaukee Brewers",
-             team_abbreviation: "MIL")
 
 Team.create!(league:  "MLB",
              city_name: "New York",
@@ -125,7 +119,101 @@ Team.create!(league:  "MLB",
              team_abbreviation: "DET")
 
 Team.create!(league:  "MLB",
+             city_name: "Minnesota",
+             team_name: "Twins",
+             full_team_name: "Minnesota Twins",
+             team_abbreviation: "MIN")
+
+Team.create!(league:  "MLB",
              city_name: "Milwaukee",
              team_name: "Brewers",
              full_team_name: "Milwaukee Brewers",
              team_abbreviation: "MIL")
+
+Team.create!(league:  "MLB",
+             city_name: "Los Angeles",
+             team_name: "Angels",
+             full_team_name: "Los Angeles Angels",
+             team_abbreviation: "LAA")
+
+Team.create!(league:  "MLB",
+             city_name: "Texas",
+             team_name: "Rangers",
+             full_team_name: "Texas Rangers",
+             team_abbreviation: "TEX")
+
+Team.create!(league:  "MLB",
+             city_name: "Oakland",
+             team_name: "Athletics",
+             full_team_name: "Oakland Athletics",
+             team_abbreviation: "OAK")
+
+Team.create!(league:  "MLB",
+             city_name: "Seattle",
+             team_name: "Mariners",
+             full_team_name: "Seattle Mariners",
+             team_abbreviation: "SEA")
+
+Team.create!(league:  "MLB",
+             city_name: "Houston",
+             team_name: "Astros",
+             full_team_name: "Houston Astros",
+             team_abbreviation: "HOU")
+
+Team.create!(league:  "MLB",
+             city_name: "New York",
+             team_name: "Yankees",
+             full_team_name: "New York Yankees",
+             team_abbreviation: "NYY")
+
+Team.create!(league:  "MLB",
+             city_name: "Toronto",
+             team_name: "Blue Jays",
+             full_team_name: "Toronto Blue Jays",
+             team_abbreviation: "TOR")
+
+Team.create!(league:  "MLB",
+             city_name: "Tampa Bay",
+             team_name: "Rays",
+             full_team_name: "Tampa Bay Rays",
+             team_abbreviation: "TBR")
+
+Team.create!(league:  "MLB",
+             city_name: "Boston",
+             team_name: "Red Sox",
+             full_team_name: "Boston Red Sox",
+             team_abbreviation: "BOS")
+
+Team.create!(league:  "MLB",
+             city_name: "Baltimore",
+             team_name: "Orioles",
+             full_team_name: "Baltimore Orioles",
+             team_abbreviation: "BAL")
+
+Game.create!(league: "MLB", starttime: "2015-08-24 00:00:00", name: "15/08/23-STL@CHC", status: "Not Started", home_team_id: 1, away_team_id: 2)
+
+Game.create!(league: "MLB", starttime: "2015-08-24 00:00:00", name: "15/08/23-CIN@PIT", status: "Not Started", home_team_id: 3, away_team_id: 4)
+
+Game.create!(league: "MLB", starttime: "2015-08-24 00:00:00", name: "15/08/23-ATL@NYM", status: "Not Started", home_team_id: 5, away_team_id: 6)
+
+Game.create!(league: "MLB", starttime: "2015-08-24 00:00:00", name: "15/08/23-PHI@MIA", status: "Not Started", home_team_id: 7, away_team_id: 8)
+
+Game.create!(league: "MLB", starttime: "2015-08-24 00:00:00", name: "15/08/23-LAD@WAS", status: "Not Started", home_team_id: 9, away_team_id: 10)
+
+Game.create!(league: "MLB", starttime: "2015-08-24 00:00:00", name: "15/08/23-COL@SFG", status: "Not Started", home_team_id: 11, away_team_id: 12)
+
+GameGamesetRelationship.create!(game_id: 1, gameset_id: 1)
+
+GameGamesetRelationship.create!(game_id: 2, gameset_id: 1)
+
+GameGamesetRelationship.create!(game_id: 3, gameset_id: 1)
+
+GameGamesetRelationship.create!(game_id: 4, gameset_id: 1)
+
+GameGamesetRelationship.create!(game_id: 5, gameset_id: 1)
+
+GameGamesetRelationship.create!(game_id: 6, gameset_id: 1)
+
+Gameset.create!(league: "MLB", starttime: "2015-08-24 00:00:00", game_id: nil, number_of_games: nil, name: "Sample Gameset 1")
+
+Contest.create!(league: "MLB", name: "Sample Contest 1", starttime: "2015-08-24 00:00:00", size: 100, gameset_id: 1)

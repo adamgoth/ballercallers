@@ -51,12 +51,7 @@
   <%= @contest.entries_count %>
 </p>
 
-<% if Time.now < @contest.starttime and @contest.entries.count < @contest.size %>
-  <%= link_to 'Enter This Contest', entries_contest_path(@contest, :contest_id => @contest.id), class: 'btn btn-success btn-sm' %>
-<% elsif @contest.entries_count >= @contest.size %>
-  There are no entries left in this contest.
-<% else %>
-<% end %>
+<%= link_to 'Enter This Contest', entries_contest_path(@contest, :contest_id => @contest.id), class: 'btn btn-success btn-sm' %>
 <br><br>
 <%= link_to 'Back to Contests', contests_path, class: 'btn btn-info btn-sm' %>
 

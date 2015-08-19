@@ -66,6 +66,8 @@ class ContestsController < ApplicationController
       params.require(:contest).permit(:user_id, 
                                     :league, 
                                     :name, 
+                                    :gameset_id,
+                                    :size,  
                                     :starttime, 
                                     :game_id, 
                                     :game_ids => [], 
