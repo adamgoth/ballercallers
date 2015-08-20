@@ -33,11 +33,15 @@
         <% end %>
       </tbody>
   </table>
-  <% else %>
-    <p>
-    
-    </p>
-  <% end %>
+<% else %>
+<div class="container">
+  <div class="jumbotron">
+    <h1>Welcome to BallerCallers</h1>
+    <p class="center">New to BallerCallers? <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary"  %></p>
+    <p class="center">Not sure how to play? <%= link_to "Learn here", learn_path, class: "btn btn-primary" %></p>
+    <p class="center">Already ballin'? <%= link_to "Sign in", new_user_session_path, class: "btn btn-primary"  %></p>
   </div>
+</div>
+<% end %>
 
 
