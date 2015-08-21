@@ -18,7 +18,7 @@
         <td>
         <%= f.fields_for :games, game do |g| %>
           <%= g.fields_for :entries, game.entries.where(user: user, contest: @contest.id).first_or_initialize do |e| %>
-            <%= e.collection_select(:selected_winner, Team.all, :id, :full_team_name, { :prompt => true}) %>
+            <%= e.select :selected_winner_id, options_for_select({game.away_team.full_team_name => game.away_team.id, game.home_team.full_team_name => game.home_team.id}), { :prompt => true }%>
             <%= e.number_field :weight %>
             <%= e.hidden_field :user_id, :value => current_user.id %>
             <%= e.hidden_field :contest_id, :value => @contest.id %>

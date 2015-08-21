@@ -9,7 +9,7 @@ class ContestsController < ApplicationController
 
   def show
     @contest = Contest.find(params[:id])
-    @entries = Entry.where(contest_id: @contest.id).all
+    @entries = Entry.where(contest_id: @contest.id, user_id: current_user).all
   end
 
   def new
@@ -45,7 +45,7 @@ class ContestsController < ApplicationController
   end
 
   def entries
-    @users = User.all
+    @users = User.where(id: current_user)
     @contest = Contest.find(params[:id])
     @games = @contest.games
   end
@@ -72,7 +72,7 @@ class ContestsController < ApplicationController
                                     :game_id, 
                                     :game_ids => [], 
                                     :games_attributes => [:id, :name,
-                                    :entries_attributes => [:id, :user_id, :game_id, :weight, :selected_winner, :contest_id]
+                                    :entries_attributes => [:id, :user_id, :game_id, :weight, :selected_winner_id, :contest_id]
                                     ])
     end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150809180446) do
+ActiveRecord::Schema.define(version: 20150820021344) do
 
   create_table "contests", force: :cascade do |t|
     t.string   "league"
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20150809180446) do
     t.integer  "weight"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "selected_winner_id"
   end
 
   create_table "game_gameset_relationships", force: :cascade do |t|

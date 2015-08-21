@@ -6,9 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create!(:email => 'adamgoth@gmail.com', 
-      :password => 'password', 
-      :password_confirmation => 'password')
+User.create!(:email => 'adamgoth@gmail.com', :password => 'password', :password_confirmation => 'password')
+User.create!(:email => 'testuser@gmail.com', :password => 'password', :password_confirmation => 'password')
 
 Team.create!(league:  "MLB",
              city_name: "Chicago",
