@@ -22,15 +22,14 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :away_team %><br>
+    <%= f.label :away_team_id %><br>
     <%= f.collection_select(:away_team_id, Team.all, :id, :full_team_name, { :prompt => true}) %>
   </div>
   
   <div class="form-group">
-    <%= f.label :home_team %><br>
+    <%= f.label :home_team_id %><br>
     <%= f.collection_select(:home_team_id, Team.all, :id, :full_team_name, { :prompt => true}) %>
   </div>
-
 
   <div class="form-group">
     <%= f.label :starttime %><br>
@@ -38,6 +37,7 @@
   </div>
 
   <div class="form-group">
+    <%= f.label :away_team_score %><br>
     <%= f.select :status, collection: ['Not Started', 'In Progress', 'Ended'] %>
 
   <div class="form-group">
@@ -52,12 +52,12 @@
 
   <div class="form-group">
     <%= f.label :winning_team_id %><br>
-    <%= collection_select(:teams, :winning_team_id, Team.all, :id, :full_team_name, prompt: true) %>
+    <%= f.collection_select(:winning_team_id, Team.all, :id, :full_team_name, { :prompt => true}) %>
   </div>
 
   <div class="form-group">
     <%= f.label :losing_team_id %><br>
-    <%= collection_select(:teams, :losing_team_id, Team.all, :id, :full_team_name, prompt: true) %>
+    <%= f.collection_select(:losing_team_id, Team.all, :id, :full_team_name, { :prompt => true}) %>
   </div>
 
   <div class="actions">

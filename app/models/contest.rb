@@ -4,6 +4,7 @@ class Contest < ActiveRecord::Base
 
 	has_many :games, through: :gameset
 	has_many :entries, dependent: :destroy
+	has_many :users, through: :entries
 
 	accepts_nested_attributes_for :games
 
@@ -17,21 +18,16 @@ class Contest < ActiveRecord::Base
  		@winner.user.username
  	end
 
-	def gameset_games
-		gameset.games.map(&:name) if gameset
-		#matchset.games.map{|g| "#{g.name} #{g.starttime}"}w
-	end
-
 	def eastern_time
 		starttime.advance(:hours => -5)
 	end
 
-	def entries_count
-		Entry.distinct.count('user_id')
-	end
-
 	def entries
 		Entry.where(contest_id: id).order(:game_id).all
+	end
+
+	def contest_users
+		Entry.uniq.pluck(:user_id)
 	end
 
 	validates :league, :gameset_id, :name, :starttime, presence: true

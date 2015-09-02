@@ -41,12 +41,12 @@ Team.create!(league:  "MLB", city_name: "Boston", team_name: "Red Sox", full_tea
 Team.create!(league:  "MLB", city_name: "Baltimore", team_name: "Orioles", full_team_name: "Baltimore Orioles", team_abbreviation: "BAL")
 
 #gameset 1 august 23 2015 est
-Game.create!(league: "MLB", starttime: "2015-08-24 00:00:00", name: "15/08/23-STL@CHC", status: "Not Started", home_team_id: 1, away_team_id: 2)
-Game.create!(league: "MLB", starttime: "2015-08-24 00:00:00", name: "15/08/23-CIN@PIT", status: "Not Started", home_team_id: 3, away_team_id: 4)
-Game.create!(league: "MLB", starttime: "2015-08-24 00:00:00", name: "15/08/23-ATL@NYM", status: "Not Started", home_team_id: 5, away_team_id: 6)
-Game.create!(league: "MLB", starttime: "2015-08-24 00:00:00", name: "15/08/23-PHI@MIA", status: "Not Started", home_team_id: 7, away_team_id: 8)
-Game.create!(league: "MLB", starttime: "2015-08-24 00:00:00", name: "15/08/23-LAD@WAS", status: "Not Started", home_team_id: 9, away_team_id: 10)
-Game.create!(league: "MLB", starttime: "2015-08-24 00:00:00", name: "15/08/23-COL@SFG", status: "Not Started", home_team_id: 11, away_team_id: 12)
+Game.create!(league: "MLB", starttime: "2015-08-24 00:00:00", name: "15/08/23-STL@CHC", status: "Ended", home_team_score: 9, away_team_score: 0, home_team_id: 1, away_team_id: 2, winning_team_id: 1, losing_team_id: 2)
+Game.create!(league: "MLB", starttime: "2015-08-24 00:00:00", name: "15/08/23-CIN@PIT", status: "Ended", home_team_score: 2, away_team_score: 4, home_team_id: 3, away_team_id: 4, winning_team_id: 4, losing_team_id: 3)
+Game.create!(league: "MLB", starttime: "2015-08-24 00:00:00", name: "15/08/23-ATL@NYM", status: "Ended", home_team_score: 3, away_team_score: 7, home_team_id: 5, away_team_id: 6, winning_team_id: 6, losing_team_id: 5)
+Game.create!(league: "MLB", starttime: "2015-08-24 00:00:00", name: "15/08/23-PHI@MIA", status: "Ended", home_team_score: 8, away_team_score: 4, home_team_id: 7, away_team_id: 8, winning_team_id: 7, losing_team_id: 8)
+Game.create!(league: "MLB", starttime: "2015-08-24 00:00:00", name: "15/08/23-LAD@WAS", status: "Ended", home_team_score: 0, away_team_score: 6, home_team_id: 9, away_team_id: 10, winning_team_id: 10, losing_team_id: 9)
+Game.create!(league: "MLB", starttime: "2015-08-24 00:00:00", name: "15/08/23-COL@SFG", status: "Ended", home_team_score: 2, away_team_score: 1, home_team_id: 11, away_team_id: 12, winning_team_id: 11, losing_team_id: 12)
 
 #gameset 2 september 23 2015 est
 Game.create!(league: "MLB", starttime: "2015-09-24 00:00:00", name: "15/09/23-COL@CHC", status: "Not Started", home_team_id: 1, away_team_id: 12)
