@@ -9,6 +9,7 @@
 User.create!(:email => 'adamgoth@gmail.com', :password => 'password', :password_confirmation => 'password')
 User.create!(:email => 'testuser@gmail.com', :password => 'password', :password_confirmation => 'password')
 
+#MLB teams
 Team.create!(league:  "MLB", city_name: "Chicago", team_name: "Cubs", full_team_name: "Chicago Cubs", team_abbreviation: "CHC")
 Team.create!(league:  "MLB", city_name: "St. Louis", team_name: "Cardinals", full_team_name: "St. Louis Cardinals", team_abbreviation: "STL")
 Team.create!(league:  "MLB", city_name: "Pittsburgh", team_name: "Pirates", full_team_name: "Pittsburgh Pirates", team_abbreviation: "PIT")
@@ -39,6 +40,42 @@ Team.create!(league:  "MLB",  city_name: "Toronto", team_name: "Blue Jays", full
 Team.create!(league:  "MLB", city_name: "Tampa Bay", team_name: "Rays", full_team_name: "Tampa Bay Rays",  team_abbreviation: "TBR")
 Team.create!(league:  "MLB", city_name: "Boston", team_name: "Red Sox", full_team_name: "Boston Red Sox", team_abbreviation: "BOS")
 Team.create!(league:  "MLB", city_name: "Baltimore", team_name: "Orioles", full_team_name: "Baltimore Orioles", team_abbreviation: "BAL")
+
+#NFL teams
+Team.create!(league:  "NFL", city_name: "Chicago", team_name: "Bears", full_team_name: "Chicago Bears", team_abbreviation: "CHI")
+Team.create!(league:  "NFL", city_name: "Baltimore", team_name: "Orioles", full_team_name: "Detroit Lions", team_abbreviation: "BAL")
+Team.create!(league:  "NFL", city_name: "Baltimore", team_name: "Orioles", full_team_name: "Green Bay Packers", team_abbreviation: "BAL")
+Team.create!(league:  "NFL", city_name: "Baltimore", team_name: "Orioles", full_team_name: "Minnesota Vikings", team_abbreviation: "BAL")
+Team.create!(league:  "NFL", city_name: "Baltimore", team_name: "Orioles", full_team_name: "St. Louis Rams", team_abbreviation: "BAL")
+Team.create!(league:  "NFL", city_name: "Baltimore", team_name: "Orioles", full_team_name: "Dallas Cowboys", team_abbreviation: "BAL")
+Team.create!(league:  "NFL", city_name: "Baltimore", team_name: "Orioles", full_team_name: "Philadelphia Eagles", team_abbreviation: "BAL")
+Team.create!(league:  "NFL", city_name: "Baltimore", team_name: "Orioles", full_team_name: "Washington Redskins", team_abbreviation: "BAL")
+Team.create!(league:  "NFL", city_name: "Baltimore", team_name: "Orioles", full_team_name: "New York Giants", team_abbreviation: "BAL")
+Team.create!(league:  "NFL", city_name: "Baltimore", team_name: "Orioles", full_team_name: "Arizona Cardinals", team_abbreviation: "BAL")
+Team.create!(league:  "NFL", city_name: "Baltimore", team_name: "Orioles", full_team_name: "San Francisco 49ers", team_abbreviation: "BAL")
+Team.create!(league:  "NFL", city_name: "Baltimore", team_name: "Orioles", full_team_name: "Seattle Seahawks", team_abbreviation: "BAL")
+Team.create!(league:  "NFL", city_name: "Baltimore", team_name: "Orioles", full_team_name: "Atlanta Falcons", team_abbreviation: "BAL")
+Team.create!(league:  "NFL", city_name: "Baltimore", team_name: "Orioles", full_team_name: "Carolina Panthers", team_abbreviation: "BAL")
+Team.create!(league:  "NFL", city_name: "Baltimore", team_name: "Orioles", full_team_name: "New Orleans Saints", team_abbreviation: "BAL")
+Team.create!(league:  "NFL", city_name: "Baltimore", team_name: "Orioles", full_team_name: "Tampa Bay Buccaneers", team_abbreviation: "BAL")
+Team.create!(league:  "NFL", city_name: "Baltimore", team_name: "Orioles", full_team_name: "Buffalo Bills", team_abbreviation: "BAL")
+Team.create!(league:  "NFL", city_name: "Baltimore", team_name: "Orioles", full_team_name: "Miami Dolphins", team_abbreviation: "BAL")
+Team.create!(league:  "NFL", city_name: "Baltimore", team_name: "Orioles", full_team_name: "New England Patriots", team_abbreviation: "BAL")
+Team.create!(league:  "NFL", city_name: "Baltimore", team_name: "Orioles", full_team_name: "New York Jets", team_abbreviation: "BAL")
+Team.create!(league:  "NFL", city_name: "Baltimore", team_name: "Orioles", full_team_name: "Denver Broncos", team_abbreviation: "BAL")
+Team.create!(league:  "NFL", city_name: "Baltimore", team_name: "Orioles", full_team_name: "Kansas City Chiefs", team_abbreviation: "BAL")
+Team.create!(league:  "NFL", city_name: "Baltimore", team_name: "Orioles", full_team_name: "Oakland Raiders", team_abbreviation: "BAL")
+Team.create!(league:  "NFL", city_name: "Baltimore", team_name: "Orioles", full_team_name: "San Diego Chargers", team_abbreviation: "BAL")
+Team.create!(league:  "NFL", city_name: "Baltimore", team_name: "Orioles", full_team_name: "Baltimore Ravers", team_abbreviation: "BAL")
+Team.create!(league:  "NFL", city_name: "Baltimore", team_name: "Orioles", full_team_name: "Cincinnati Bengals", team_abbreviation: "BAL")
+Team.create!(league:  "NFL", city_name: "Baltimore", team_name: "Orioles", full_team_name: "Cleveland Browns", team_abbreviation: "BAL")
+Team.create!(league:  "NFL", city_name: "Baltimore", team_name: "Orioles", full_team_name: "Pittsburgh Steelers", team_abbreviation: "BAL")
+Team.create!(league:  "NFL", city_name: "Baltimore", team_name: "Orioles", full_team_name: "Houston Texans", team_abbreviation: "BAL")
+Team.create!(league:  "NFL", city_name: "Baltimore", team_name: "Orioles", full_team_name: "Indianapolis Colts", team_abbreviation: "BAL")
+Team.create!(league:  "NFL", city_name: "Baltimore", team_name: "Orioles", full_team_name: "Jacksonville Jaguars", team_abbreviation: "BAL")
+Team.create!(league:  "NFL", city_name: "Baltimore", team_name: "Orioles", full_team_name: "Tennessee Titans", team_abbreviation: "BAL")
+
+
 
 #gameset 1 august 23 2015 est
 Game.create!(league: "MLB", starttime: "2015-08-24 00:00:00", name: "15/08/23-STL@CHC", status: "Ended", home_team_score: 9, away_team_score: 0, home_team_id: 1, away_team_id: 2, winning_team_id: 1, losing_team_id: 2)

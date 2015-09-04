@@ -28,7 +28,7 @@
           <td><%= link_to contest.gameset.name, gameset_path(contest.gameset_id) %></td>
           <td><%= contest.starttime.advance(:hours => -5).strftime("%a %b %d %I:%M %p EST") %></td>
           <td><%= contest.size %></td>
-          <td><%= contest.entries_count %>
+          <td><%= contest.users.uniq.each.count %></td>
         </tr>
         <% end %>
       </tbody>
